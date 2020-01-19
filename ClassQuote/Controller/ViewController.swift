@@ -35,7 +35,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tappedNewQuoteButton() {
-        QuoteService.getQuote { (success, quote) in
+        toggleActivityIndicator(shown: true)
+        QuoteService.shared.getQuote { (success, quote) in
+            self.toggleActivityIndicator(shown: false)
             if success, let quote = quote {
                 self.update(quote: quote)
             } else {
@@ -44,13 +46,18 @@ class ViewController: UIViewController {
         }
     }
 
+    private func toggleActivityIndicator(shown: Bool) {
+        newQuoteButton.isHidden = shown
+        activityIndicator.isHidden = !shown
+    }
+
     private func presentAlert() {
         // On crée l'alerte.
-               let alertVC = UIAlertController(title: "Error", message: "The quote download failed", preferredStyle: .alert)
-               // On crée l'action.
-                alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-               // Et on présente l'alerte.
-               present(alertVC, animated: true, completion: nil)
-           }
+        let alertVC = UIAlertController(title: "Error", message: "The quote download failed", preferredStyle: .alert)
+        // On crée l'action.
+        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        // Et on présente l'alerte.
+        present(alertVC, animated: true, completion: nil)
     }
+}
 
