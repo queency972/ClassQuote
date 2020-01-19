@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Courier.ttc">
+            <string>Courier-Oblique</string>
+        </array>
+        <array key="CourierNew.ttf">
+            <string>CourierNewPSMT</string>
+        </array>
+        <array key="CourierNewBold.ttf">
+            <string>CourierNewPS-BoldMT</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClassQuote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A7k-Vv-VCh">
+                                <rect key="frame" x="16" y="64" width="343" height="343"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="A7k-Vv-VCh" secondAttribute="height" multiplier="1:1" id="fXB-h7-5cJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWX-by-Hvf">
+                                <rect key="frame" x="24" y="72" width="327" height="327"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRC-Xa-dPe">
+                                <rect key="frame" x="16" y="694" width="343" height="64"/>
+                                <color key="backgroundColor" red="0.58081901069999997" green="0.18123403782636108" blue="0.16750967747195245" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="jp2-h7-vNR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="18"/>
+                                <state key="normal" title="NEW QUOTE">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedNewQuoteButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="JwB-ql-cjP"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Jse-O9-iZf">
+                                <rect key="frame" x="169" y="708" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="Os5-m9-5Tz"/>
+                                    <constraint firstAttribute="height" constant="37" id="zjE-ec-77h"/>
+                                </constraints>
+                                <color key="color" red="0.57871961589999998" green="0.18070918320000001" blue="0.16885137559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jean L'auteur" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sd1-Ey-hcd">
+                                <rect key="frame" x="24" y="415" width="327" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="VxX-4w-hgc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier-Oblique" family="Courier" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CWX-by-Hvf" firstAttribute="top" secondItem="A7k-Vv-VCh" secondAttribute="top" constant="8" id="10o-G8-ax2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A7k-Vv-VCh" secondAttribute="trailing" constant="16" id="4gi-x5-2zj"/>
+                            <constraint firstItem="A7k-Vv-VCh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ALt-BT-HUC"/>
+                            <constraint firstItem="Jse-O9-iZf" firstAttribute="centerX" secondItem="zRC-Xa-dPe" secondAttribute="centerX" id="HV3-96-ONJ"/>
+                            <constraint firstItem="sd1-Ey-hcd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="MJv-fP-KiF"/>
+                            <constraint firstItem="Jse-O9-iZf" firstAttribute="centerY" secondItem="zRC-Xa-dPe" secondAttribute="centerY" id="TKn-6q-pZj"/>
+                            <constraint firstItem="CWX-by-Hvf" firstAttribute="leading" secondItem="A7k-Vv-VCh" secondAttribute="leading" constant="8" id="el2-E4-oMa"/>
+                            <constraint firstItem="A7k-Vv-VCh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hqp-iu-boH"/>
+                            <constraint firstItem="CWX-by-Hvf" firstAttribute="bottom" secondItem="A7k-Vv-VCh" secondAttribute="bottom" constant="-8" id="iSJ-UL-nfB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="zRC-Xa-dPe" secondAttribute="trailing" constant="16" id="qAm-qt-eTF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sd1-Ey-hcd" secondAttribute="trailing" constant="24" id="qVP-uN-C77"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zRC-Xa-dPe" secondAttribute="bottom" constant="20" id="rgw-kV-hit"/>
+                            <constraint firstItem="CWX-by-Hvf" firstAttribute="trailing" secondItem="A7k-Vv-VCh" secondAttribute="trailing" constant="-8" id="vL2-hA-Gk9"/>
+                            <constraint firstItem="zRC-Xa-dPe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wby-B2-ari"/>
+                            <constraint firstItem="sd1-Ey-hcd" firstAttribute="top" secondItem="A7k-Vv-VCh" secondAttribute="bottom" constant="8" id="y9L-6v-tAy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Jse-O9-iZf" id="7PE-GF-Z3U"/>
+                        <outlet property="authorLabel" destination="sd1-Ey-hcd" id="gER-B9-WXo"/>
+                        <outlet property="imageView" destination="A7k-Vv-VCh" id="DUW-Fn-R8m"/>
+                        <outlet property="newQuoteButton" destination="zRC-Xa-dPe" id="USj-wO-oFp"/>
+                        <outlet property="quoteLabel" destination="CWX-by-Hvf" id="7fq-yk-aJ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="167.76611694152925"/>
+        </scene>
+    </scenes>
+</document>

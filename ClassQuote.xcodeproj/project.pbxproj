@@ -12,18 +12,9 @@
 		C93F3E5F205142B8008FFD8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93F3E5D205142B8008FFD8F /* Main.storyboard */; };
 		C93F3E61205142B8008FFD8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C93F3E60205142B8008FFD8F /* Assets.xcassets */; };
 		C93F3E64205142B8008FFD8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93F3E62205142B8008FFD8F /* LaunchScreen.storyboard */; };
-		C93F3E6F205142B8008FFD8F /* ClassQuoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93F3E6E205142B8008FFD8F /* ClassQuoteTests.swift */; };
+		E96C30E923D38980000B75B9 /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C30E823D38980000B75B9 /* QuoteService.swift */; };
+		E96C30EB23D3D1DD000B75B9 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C30EA23D3D1DD000B75B9 /* Quote.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C93F3E6B205142B8008FFD8F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C93F3E4E205142B7008FFD8F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C93F3E55205142B7008FFD8F;
-			remoteInfo = ClassQuote;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C93F3E56205142B8008FFD8F /* ClassQuote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassQuote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,20 +24,12 @@
 		C93F3E60205142B8008FFD8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C93F3E63205142B8008FFD8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C93F3E65205142B8008FFD8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C93F3E6A205142B8008FFD8F /* ClassQuoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassQuoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C93F3E6E205142B8008FFD8F /* ClassQuoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassQuoteTests.swift; sourceTree = "<group>"; };
-		C93F3E70205142B8008FFD8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E96C30E823D38980000B75B9 /* QuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
+		E96C30EA23D3D1DD000B75B9 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C93F3E53205142B7008FFD8F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C93F3E67205142B8008FFD8F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				C93F3E58205142B8008FFD8F /* ClassQuote */,
-				C93F3E6D205142B8008FFD8F /* ClassQuoteTests */,
 				C93F3E57205142B8008FFD8F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				C93F3E56205142B8008FFD8F /* ClassQuote.app */,
-				C93F3E6A205142B8008FFD8F /* ClassQuoteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,22 +59,39 @@
 			isa = PBXGroup;
 			children = (
 				C93F3E59205142B8008FFD8F /* AppDelegate.swift */,
-				C93F3E5B205142B8008FFD8F /* ViewController.swift */,
-				C93F3E5D205142B8008FFD8F /* Main.storyboard */,
-				C93F3E60205142B8008FFD8F /* Assets.xcassets */,
-				C93F3E62205142B8008FFD8F /* LaunchScreen.storyboard */,
 				C93F3E65205142B8008FFD8F /* Info.plist */,
+				C93F3E7B205142E1008FFD8F /* Model */,
+				C93F3E7A205142D7008FFD8F /* Controller */,
+				C93F3E79205142D1008FFD8F /* View */,
 			);
 			path = ClassQuote;
 			sourceTree = "<group>";
 		};
-		C93F3E6D205142B8008FFD8F /* ClassQuoteTests */ = {
+		C93F3E79205142D1008FFD8F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C93F3E6E205142B8008FFD8F /* ClassQuoteTests.swift */,
-				C93F3E70205142B8008FFD8F /* Info.plist */,
+				C93F3E5D205142B8008FFD8F /* Main.storyboard */,
+				C93F3E60205142B8008FFD8F /* Assets.xcassets */,
+				C93F3E62205142B8008FFD8F /* LaunchScreen.storyboard */,
 			);
-			path = ClassQuoteTests;
+			path = View;
+			sourceTree = "<group>";
+		};
+		C93F3E7A205142D7008FFD8F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C93F3E5B205142B8008FFD8F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C93F3E7B205142E1008FFD8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E96C30E823D38980000B75B9 /* QuoteService.swift */,
+				E96C30EA23D3D1DD000B75B9 /* Quote.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,24 +114,6 @@
 			productReference = C93F3E56205142B8008FFD8F /* ClassQuote.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C93F3E69205142B8008FFD8F /* ClassQuoteTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C93F3E76205142B8008FFD8F /* Build configuration list for PBXNativeTarget "ClassQuoteTests" */;
-			buildPhases = (
-				C93F3E66205142B8008FFD8F /* Sources */,
-				C93F3E67205142B8008FFD8F /* Frameworks */,
-				C93F3E68205142B8008FFD8F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C93F3E6C205142B8008FFD8F /* PBXTargetDependency */,
-			);
-			name = ClassQuoteTests;
-			productName = ClassQuoteTests;
-			productReference = C93F3E6A205142B8008FFD8F /* ClassQuoteTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -141,17 +121,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = OpenClassrooms;
 				TargetAttributes = {
 					C93F3E55205142B7008FFD8F = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
-					};
-					C93F3E69205142B8008FFD8F = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = C93F3E55205142B7008FFD8F;
 					};
 				};
 			};
@@ -169,7 +145,6 @@
 			projectRoot = "";
 			targets = (
 				C93F3E55205142B7008FFD8F /* ClassQuote */,
-				C93F3E69205142B8008FFD8F /* ClassQuoteTests */,
 			);
 		};
 /* End PBXProject section */
@@ -185,13 +160,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C93F3E68205142B8008FFD8F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -199,28 +167,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96C30EB23D3D1DD000B75B9 /* Quote.swift in Sources */,
 				C93F3E5C205142B8008FFD8F /* ViewController.swift in Sources */,
+				E96C30E923D38980000B75B9 /* QuoteService.swift in Sources */,
 				C93F3E5A205142B8008FFD8F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C93F3E66205142B8008FFD8F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C93F3E6F205142B8008FFD8F /* ClassQuoteTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C93F3E6C205142B8008FFD8F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C93F3E55205142B7008FFD8F /* ClassQuote */;
-			targetProxy = C93F3E6B205142B8008FFD8F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C93F3E5D205142B8008FFD8F /* Main.storyboard */ = {
@@ -256,6 +210,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -263,6 +218,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -313,6 +269,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -320,6 +277,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -354,11 +312,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76QL65N5BA;
 				INFOPLIST_FILE = ClassQuote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.openclassrooms.ClassQuote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -368,44 +327,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76QL65N5BA;
 				INFOPLIST_FILE = ClassQuote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.openclassrooms.ClassQuote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		C93F3E77205142B8008FFD8F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ClassQuoteTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.openclassrooms.ClassQuoteTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClassQuote.app/ClassQuote";
-			};
-			name = Debug;
-		};
-		C93F3E78205142B8008FFD8F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ClassQuoteTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.openclassrooms.ClassQuoteTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClassQuote.app/ClassQuote";
 			};
 			name = Release;
 		};
@@ -426,15 +354,6 @@
 			buildConfigurations = (
 				C93F3E74205142B8008FFD8F /* Debug */,
 				C93F3E75205142B8008FFD8F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C93F3E76205142B8008FFD8F /* Build configuration list for PBXNativeTarget "ClassQuoteTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C93F3E77205142B8008FFD8F /* Debug */,
-				C93F3E78205142B8008FFD8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
