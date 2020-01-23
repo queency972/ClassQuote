@@ -27,18 +27,17 @@ class QuoteService {
 
     init(quoteSession: URLSession, imageSession: URLSession) {
         self.quoteSession = quoteSession
-        self.imageSession =  imageSession
+        self.imageSession = imageSession
     }
 
     // Récuparation de la citation via une requete.
     func getQuote(callback: @escaping (Bool, Quote?) -> Void) {
-
         task?.cancel()
 
         let request = createQuoteRequest()
 
         task = quoteSession.dataTask(with: request) { (data, response, error) in
-            // Tout ce qui touche à l'interface doit avoir lieu dans la main Queue
+            // Tout ce qui touche à l'interface doit avoir lieu dans la main Queue, On place ce block dans la Main Queue.
             DispatchQueue.main.async {
                 // Verification des données et si il n'y a pas d'erreur.
                 guard let data = data, error == nil else {
@@ -81,7 +80,7 @@ class QuoteService {
         // On choisit la method.
         request.httpMethod = "POST"
 
-        // Les parametres de la requete.
+        // On défini les parametres de la requete.
         let body = "method=getQuote&format=json&lang=en"
         request.httpBody = body.data(using: .utf8)
         return request
